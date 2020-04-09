@@ -16,6 +16,8 @@
 
         public DbSet<OrderDetailTemp> OrderDetailTemps { get; set; }
 
+        public DbSet<City> Cities { get; set; }
+
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 

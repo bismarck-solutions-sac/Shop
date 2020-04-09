@@ -7,6 +7,7 @@ namespace Shop.Web.Controllers
     using Shop.Web.Data;
     using Shop.Web.Data.Respositories;
     using Shop.Web.Models;
+    using System;
     using System.Threading.Tasks;
 
     [Authorize]
@@ -99,6 +100,42 @@ namespace Shop.Web.Controllers
 
             return this.RedirectToAction("Create");
         }
+
+        public async Task<IActionResult> Deliver(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var order = await this.orderRepository.GetOrdersAsync(id.Value);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            order.DeliveryDate = order.DeliveryDate == null ? DateTime.Today : order.DeliveryDate;  
+            // this.Items == null ? 0 : this.Items.Count();
+            var model = new DeliverViewModel
+            {
+                Id = order.Id,
+                DeliveryDate = Convert.ToDateTime(order.DeliveryDate)
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Deliver(DeliverViewModel model)
+        {
+            if (this.ModelState.IsValid)
+            {
+                await this.orderRepository.DeliverOrder(model);
+                return this.RedirectToAction("Index");
+            }
+
+            return this.View();
+        }
+
 
 
     }

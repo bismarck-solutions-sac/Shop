@@ -1,5 +1,4 @@
-﻿
-namespace Shop.Web.Data.Entities
+﻿namespace Shop.Web.Data.Entities
 {
     using System;
     using System.ComponentModel.DataAnnotations;
@@ -18,9 +17,11 @@ namespace Shop.Web.Data.Entities
         public string ImageUrl { get; set; }
 
         [Display(Name = "Last Purchase")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime? LastPurchase { get; set; }
 
         [Display(Name = "Last Sale")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime? LastSale { get; set; }
 
         [Display(Name = "Is Availabe?")]
