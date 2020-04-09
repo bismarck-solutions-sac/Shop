@@ -8,7 +8,6 @@
     using System.Threading.Tasks;
     using System.Net.Http.Headers;
     using System.Text;
-
     public class ApiService
     {
         public async Task<Response> GetListAsync<T>(
