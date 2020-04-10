@@ -14,7 +14,6 @@
     using Microsoft.IdentityModel.Tokens;
     using Shop.Web.Data.Respositories;
     using System.Text;
-
     public class Startup
     {
         public Startup(IConfiguration configuration)
