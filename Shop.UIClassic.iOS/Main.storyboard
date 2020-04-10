@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="201" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="52" y="88" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="202" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Enter your email">
+                                <rect key="frame" x="52" y="117" width="209" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="215" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="52" y="167" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="237" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Enter your password">
+                                <rect key="frame" x="52" y="207" width="209" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <constraints>
+                                    <constraint id="1107" firstAttribute="width" constant="209"/>
+                                </constraints>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="306" hidesWhenStopped="YES" hidden="YES">
+                                <rect key="frame" x="146" y="284" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="342" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="133" y="347" width="46" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="UIButton342_TouchUpInside:" destination="BYZ-38-t0r" id="626" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="203" firstItem="201" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36"/>
+                            <constraint id="204" firstItem="201" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68"/>
+                            <constraint id="205" firstItem="202" firstAttribute="top" secondItem="201" secondAttribute="centerY" constant="18"/>
+                            <constraint id="206" firstItem="202" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36"/>
+                            <constraint id="208" firstAttribute="trailingMargin" secondItem="202" secondAttribute="trailing" constant="43"/>
+                            <constraint id="216" firstItem="215" firstAttribute="top" secondItem="202" secondAttribute="bottom" constant="20"/>
+                            <constraint id="217" firstItem="215" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36"/>
+                            <constraint id="218" firstItem="215" firstAttribute="top" secondItem="202" secondAttribute="centerY" constant="35"/>
+                            <constraint id="268" firstItem="237" firstAttribute="top" secondItem="215" secondAttribute="bottom" constant="20"/>
+                            <constraint id="269" firstItem="237" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36"/>
+                            <constraint id="308" firstAttribute="trailingMargin" secondItem="306" secondAttribute="trailing" constant="138"/>
+                            <constraint id="309" firstItem="306" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="130"/>
+                            <constraint id="359" firstItem="342" firstAttribute="top" secondItem="306" secondAttribute="centerY" constant="71"/>
+                            <constraint id="360" firstItem="342" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="117"/>
+                            <constraint id="361" firstAttribute="trailingMargin" secondItem="342" secondAttribute="trailing" constant="125"/>
+                            <constraint id="362" firstItem="wfy-db-euE" firstAttribute="top" secondItem="342" secondAttribute="bottom" constant="103"/>
+                            <constraint id="604" firstAttribute="trailingMargin" secondItem="237" secondAttribute="trailing" constant="43"/>
+                            <constraint id="2308" firstItem="306" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="264"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EmailText" destination="202" id="name-outlet-202"/>
+                        <outlet property="PasswordText" destination="237" id="name-outlet-237"/>
+                        <outlet property="ActivityIndicator" destination="306" id="name-outlet-306"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
